@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyelena <cyelena@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/03 17:33:42 by cyelena           #+#    #+#             */
-/*   Updated: 2021/12/04 19:44:17 by cyelena          ###   ########.fr       */
+/*   Created: 2021/10/08 10:44:03 by cyelena           #+#    #+#             */
+/*   Updated: 2021/10/08 12:01:17 by cyelena          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include <stdarg.h>
-// # include <stdio.h>
-// # include <unistd.h>
-# include "./libft/libft.h"
-
-int	ft_printf(const char *arg, ...);
-#endif
+int	ft_isalnum(int c)
+{
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122) || (c >= 48 && c <= 57))
+		return (1);
+	else
+		return (0);
+}

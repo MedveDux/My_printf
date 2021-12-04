@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyelena <cyelena@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/03 17:33:42 by cyelena           #+#    #+#             */
-/*   Updated: 2021/12/04 19:44:17 by cyelena          ###   ########.fr       */
+/*   Created: 2021/10/24 13:25:57 by cyelena           #+#    #+#             */
+/*   Updated: 2021/10/25 19:32:47 by cyelena          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include <stdarg.h>
-// # include <stdio.h>
-// # include <unistd.h>
-# include "./libft/libft.h"
+#include "libft.h"
 
-int	ft_printf(const char *arg, ...);
-#endif
+t_list	*ft_lstnew(void *content)
+{
+	t_list	*new;
+
+	new = (t_list *)malloc(sizeof(t_list));
+	if (!new)
+		return (0);
+	new -> content = content;
+	new -> next = NULL;
+	return (new);
+}

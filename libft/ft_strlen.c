@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyelena <cyelena@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/03 17:33:42 by cyelena           #+#    #+#             */
-/*   Updated: 2021/12/04 19:44:17 by cyelena          ###   ########.fr       */
+/*   Created: 2021/10/08 10:46:19 by cyelena           #+#    #+#             */
+/*   Updated: 2021/10/25 19:34:05 by cyelena          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include <stdarg.h>
-// # include <stdio.h>
-// # include <unistd.h>
-# include "./libft/libft.h"
+#include "libft.h"
 
-int	ft_printf(const char *arg, ...);
-#endif
+size_t	ft_strlen(const char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}

@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyelena <cyelena@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/03 17:33:42 by cyelena           #+#    #+#             */
-/*   Updated: 2021/12/04 19:44:17 by cyelena          ###   ########.fr       */
+/*   Created: 2021/10/24 16:48:19 by cyelena           #+#    #+#             */
+/*   Updated: 2021/10/25 19:32:51 by cyelena          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include <stdarg.h>
-// # include <stdio.h>
-// # include <unistd.h>
-# include "./libft/libft.h"
+#include "libft.h"
 
-int	ft_printf(const char *arg, ...);
-#endif
+int	ft_lstsize(t_list *lst)
+{
+	int	i;
+
+	i = 0;
+	if (!lst)
+		return (0);
+	while (lst)
+	{
+		lst = lst -> next;
+		i++;
+	}
+	return (i);
+}
