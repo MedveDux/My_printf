@@ -6,7 +6,7 @@
 #    By: cyelena <cyelena@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 10:43:47 by cyelena           #+#    #+#              #
-#    Updated: 2021/12/04 20:43:17 by cyelena          ###   ########.fr        #
+#    Updated: 2021/12/07 21:14:01 by cyelena          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRCS =	./libft/ft_isalpha.c ./libft/ft_isdigit.c ./libft/ft_isalnum.c ./libft/ft
 		./libft/ft_putendl_fd.c ./libft/ft_putnbr_fd.c  ./libft/ft_lstnew.c ./libft/ft_lstadd_front.c \
 		./libft/ft_lstsize.c ./libft/ft_lstlast.c ./libft/ft_lstadd_back.c ./libft/ft_lstdelone.c \
 		./libft/ft_lstclear.c ./libft/ft_lstiter.c ./libft/ft_lstmap.c ./libft/ft_putstr_fd_printf.c \
-		./libft/ft_putchar_fd_printf.c ./libft/ft_putnbr_fd_printf.c
+		./libft/ft_putchar_fd_printf.c ./libft/ft_putp_fd_printf.c ./libft/ft_putdecimal_printf.c
 HEAD = ./libft/blibft.h
 
 OBJ = ${patsubst %.c,%.o,$(SRCS)}

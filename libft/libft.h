@@ -6,7 +6,7 @@
 /*   By: cyelena <cyelena@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 10:46:24 by cyelena           #+#    #+#             */
-/*   Updated: 2021/12/04 20:40:38 by cyelena          ###   ########.fr       */
+/*   Updated: 2021/12/07 21:17:22 by cyelena          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int		ft_putstr_fd_printf(char *s, int fd);
 int		ft_putchar_fd_printf(char c, int fd);
-int		ft_putnbr_fd_printf(int n, int fd);
+int		ft_putp_fd_printf(long unsigned int n, int fd);
+int		ft_back(char *s, int i);
+int		*ft_putdecimal_printf(int n);
 #endif

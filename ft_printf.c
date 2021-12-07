@@ -6,15 +6,11 @@
 /*   By: cyelena <cyelena@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 17:21:35 by cyelena           #+#    #+#             */
-/*   Updated: 2021/12/04 21:01:50 by cyelena          ###   ########.fr       */
+/*   Updated: 2021/12/07 21:15:01 by cyelena          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-// void	ft_putchar_fd(char c, int fd)
-// {
-// 	write (fd, &c, 1);
-// }
 
 int	ft_con(char *arg, va_list ptr)
 {
@@ -31,10 +27,13 @@ int	ft_con(char *arg, va_list ptr)
 	}
 	else if (*arg == 'p')
 	{
-		write (1, "0x", 2);
-		size += ft_putnbr_fd_printf(va_arg(ptr, long unsigned int), 1);
+		size += write (1, "0x", 2);
+		size += ft_putp_fd_printf(va_arg(ptr, long unsigned int), 1);
 	}
-	//else if (*arg == '')
+	else if (*arg == 'p')
+	{
+		size 
+	}
 	return (size);
 }
 
@@ -49,20 +48,27 @@ int	ft_printf(const char *arg, ...)
 	va_start(ptr, arg);
 	while (arg[++i])
 	{
-		if (arg[i] == '%')
+		if (arg[i] == '%' && arg[i])
 		{
 			len += ft_con((char *)(&arg[i + 1]), ptr);
+			++i;
 		}
+		else
+			len += write (1, &arg[i], 1);
 	}
-	printf("{%d}", len);
-	return 0;
+	printf("\n{%d}", len);
+	return (len);
 }
 
 
 int	main()
 {
 	int	i;
+	int	*b;
 
-	i = ft_printf("%c%p", 'c', i);
+	i = 0;
+	// b = &i;
+	ft_printf("%c  %p", 'c', b);
+	printf("%c  %p", 'c', b);
 	return 0;
 }
