@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd_printf.c                              :+:      :+:    :+:   */
+/*   ft_putx_fd_printf.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cyelena <cyelena@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/04 20:01:18 by cyelena           #+#    #+#             */
-/*   Updated: 2021/12/08 16:50:05 by cyelena          ###   ########.fr       */
+/*   Created: 2021/12/04 20:40:01 by cyelena           #+#    #+#             */
+/*   Updated: 2021/12/08 16:17:49 by cyelena          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putstr_fd_printf(char *s, int fd)
+int	ft_putx_fd_printf( int n, int fd)
 {
-	int	i;
+	int		size;
+	int		i;
+	char	s[17];
 
 	i = 0;
-	if (s == NULL)
+	size = 0;
+	if (n == 0)
+		return (ft_putchar_fd_printf(('0'), fd));
+	while (n > 0)
 	{
-		write (1, "(null)", 6);
-		return (6);
+		if ((n % 16) < 10)
+			s[i] = ((n % 16) + '0');
+		else
+			s[i] = ((n % 16) + 87);
+		i++;
+		n = n / 16;
 	}
-	if (s)
-	{
-		while (*s)
-		{
-			ft_putchar_fd(*s, fd);
-			s++;
-			i++;
-		}
-	}
-	return (i);
+	s[i] = '\0';
+	return (ft_back(s, i));
 }

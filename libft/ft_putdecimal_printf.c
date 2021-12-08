@@ -6,7 +6,7 @@
 /*   By: cyelena <cyelena@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 21:11:47 by cyelena           #+#    #+#             */
-/*   Updated: 2021/12/07 21:22:23 by cyelena          ###   ########.fr       */
+/*   Updated: 2021/12/08 16:47:27 by cyelena          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,23 +32,21 @@ static int	ft_minus(int num)
 	return (len_num);
 }
 
-static int	ft_print(char **s)
+static int	ft_print(char *s)
 {
-	int	i;
 	int	k;
 
 	k = 0;
-	i = ft_strlen(s);
-	while (i > 0)
+	while (s[k])
 	{
 		write (1, &s[k], 1);
 		k++;
-		i++;
 	}
+	free (s);
 	return (k);
 }
 
-int	*ft_putdecimal_printf(int n)
+int	ft_putdecimal_printf(int n)
 {
 	int		l;
 	long	num;
@@ -74,5 +72,5 @@ int	*ft_putdecimal_printf(int n)
 		num = num / 10;
 		l--;
 	}
-	return (l = ft_print(&s));
+	return (l = ft_print(s));
 }

@@ -6,7 +6,7 @@
 /*   By: cyelena <cyelena@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 20:40:01 by cyelena           #+#    #+#             */
-/*   Updated: 2021/12/07 21:02:01 by cyelena          ###   ########.fr       */
+/*   Updated: 2021/12/08 16:36:24 by cyelena          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	ft_back(char *s, int i)
 	int	size;
 
 	size = i;
-	while (i >= 0)
+	while (i > 0)
 	{
 		write (1, &s[i], 1);
 		i--;
