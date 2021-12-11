@@ -6,13 +6,13 @@
 /*   By: cyelena <cyelena@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 16:18:18 by cyelena           #+#    #+#             */
-/*   Updated: 2021/12/08 16:18:46 by cyelena          ###   ########.fr       */
+/*   Updated: 2021/12/11 20:00:40 by cyelena          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putxX_fd_printf( int n, int fd)
+int	ft_putxx_fd_printf( int n, int fd)
 {
 	int		size;
 	int		i;

@@ -6,7 +6,7 @@
 /*   By: cyelena <cyelena@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 17:21:35 by cyelena           #+#    #+#             */
-/*   Updated: 2021/12/08 16:35:39 by cyelena          ###   ########.fr       */
+/*   Updated: 2021/12/11 20:00:12 by cyelena          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_con(char *arg, va_list ptr)
 	else if (*arg == 'x')
 		size += ft_putx_fd_printf(va_arg(ptr, unsigned int), 1);
 	else if (*arg == 'X')
-		size += ft_putxX_fd_printf(va_arg(ptr, unsigned int), 1);
+		size += ft_putxx_fd_printf(va_arg(ptr, unsigned int), 1);
 	else if (*arg == '%')
 		size += write (1, "%", 1);
 	return (size);

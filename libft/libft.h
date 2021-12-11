@@ -6,7 +6,7 @@
 /*   By: cyelena <cyelena@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 10:46:24 by cyelena           #+#    #+#             */
-/*   Updated: 2021/12/08 16:19:09 by cyelena          ###   ########.fr       */
+/*   Updated: 2021/12/11 20:00:51 by cyelena          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,5 @@ int		ft_back(char *s, int i);
 int		ft_putdecimal_printf(int n);
 int		ft_putunsigned_printf(unsigned int n);
 int		ft_putx_fd_printf( int n, int fd);
-int		ft_putxX_fd_printf( int n, int fd);
+int		ft_putxx_fd_printf( int n, int fd);
 #endif

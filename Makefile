@@ -6,7 +6,7 @@
 #    By: cyelena <cyelena@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 10:43:47 by cyelena           #+#    #+#              #
-#    Updated: 2021/12/08 16:19:50 by cyelena          ###   ########.fr        #
+#    Updated: 2021/12/11 20:00:15 by cyelena          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SRCS =	./libft/ft_isalpha.c ./libft/ft_isdigit.c ./libft/ft_isalnum.c ./libft/ft
 		./libft/ft_lstsize.c ./libft/ft_lstlast.c ./libft/ft_lstadd_back.c ./libft/ft_lstdelone.c \
 		./libft/ft_lstclear.c ./libft/ft_lstiter.c ./libft/ft_lstmap.c ./libft/ft_putstr_fd_printf.c \
 		./libft/ft_putchar_fd_printf.c ./libft/ft_putp_fd_printf.c ./libft/ft_putdecimal_printf.c \
-		./libft/ft_putunsigned_printf.c ./libft/ft_putx_fd_printf.c ./libft/ft_putxX_fd_printf.c \
+		./libft/ft_putunsigned_printf.c ./libft/ft_putx_fd_printf.c ./libft/ft_putxx_fd_printf.c \
 		ft_printf.c
 HEAD = ./libft/libft.h ft_printf.h
 
